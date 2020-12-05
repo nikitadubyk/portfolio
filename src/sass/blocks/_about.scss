@@ -1,0 +1,65 @@
+.about{
+    position: relative;
+    padding: 120px 0 120px 0;
+    &__wrapper {
+        display: grid;
+        grid-template-columns:400px 550px;
+        column-gap: 70px;
+        row-gap: 40px;
+        grid-template-rows: minmax(130px, auto);
+        grid-auto-rows: minmax(130px, auto);
+    }
+    &__img {
+        grid-row: 1 / 3;
+        img {
+            width: 100%;
+        }
+    }
+    &_title {
+        position: relative;
+        z-index: 2;
+        padding-left: 12px;
+        @include before_circle;
+    }
+    &_subtitle {
+        font-style: normal;
+        font-weight: bold;
+        margin-top: 6px;
+    }
+    &__descr {
+        margin-top: 20px;
+    }
+    .divider {
+        margin-top: 4px;
+    }
+
+    &__skills {
+        display: grid;
+        grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
+        column-gap: 30px;
+        row-gap: 20px;
+        &-item {
+            display: grid;
+            position: relative;
+            grid-template-columns: 40px 200px;
+            column-gap: 20px;
+            &-circle {
+                padding-left: 15px;
+                @include before_circle;
+                &::before {
+                    top: -15px;
+                }
+            }
+        }
+        &-text {
+            margin-top: 6px;
+        }
+
+    }
+    .title_fz14 {
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    
+}
