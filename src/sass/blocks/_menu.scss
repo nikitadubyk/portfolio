@@ -49,6 +49,12 @@
         top: 25px;
         right: 25px;
         cursor: pointer;
+        opacity: .6;
+        transition: 0.2s all;
+        &:hover {
+            transform: rotate(90deg);
+            opacity: 1;
+        }
     }
 
     &__list {

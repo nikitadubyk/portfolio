@@ -1,6 +1,6 @@
 .about{
     position: relative;
-    padding: 120px 0 120px 0;
+    padding-top: 120px;
     &__wrapper {
         display: grid;
         grid-template-columns:400px 550px;
@@ -30,7 +30,8 @@
         margin-top: 20px;
     }
     .divider {
-        margin-top: 4px;
+        margin: 0;
+
     }
 
     &__skills {
