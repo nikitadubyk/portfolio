@@ -25,4 +25,12 @@
         font-size: 48px;
         font-weight: bold;
     }
+    &__section-title {
+        position: relative;
+        text-align: center;
+        @include before_circle-mid;
+    }
+    &__section-subtitle {
+        text-align: center;
+    }
 }
