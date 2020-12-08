@@ -37,8 +37,7 @@
             }
         }
         &-money {
-            display: grid;
-            justify-content: flex-end;
+            justify-self: end;
             font-weight: bold;
             font-size: 14px;
         }
