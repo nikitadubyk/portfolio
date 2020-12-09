@@ -8,6 +8,10 @@
     justify-content: space-between;
     align-items: flex-end;
     cursor: pointer;
+    transition: 0.3s all;
+        &:hover {
+            transform: scale(1.05);
+        }
     span {
         display: block;
         width: 30px;

@@ -23,9 +23,11 @@
     &__link {
         color: #000000;
         font-weight: bold;
+        transition: 0.3s all;
         &:hover {
             color: #000000;
             text-decoration: none;
+            transform: scale(1.05);
         }
     }
 }
