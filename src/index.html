@@ -60,12 +60,12 @@
             </div>
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="#">ПРО МЕНЯ</a></li>
+                    <li class="menu__link"><a href="#about">ПРО МЕНЯ</a></li>
                     <li class="menu__link"><a href="#">МОЙ ОПЫТ</a></li>
                     <li class="menu__link"><a href="#">МОИ НАВЫКИ</a></li>
                     <li class="menu__link"><a href="#">МОИ РАБОТЫ</a></li>
                     <li class="menu__link"><a href="#">ПРАЙС-ЛИСТ</a></li>
-                    <li class="menu__link"><a href="#">КОНТАКТЫ</a></li>
+                    <li class="menu__link"><a href="#contacts">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
 
@@ -103,17 +103,26 @@
             <h1 class="title title_fz48 promo__title">Я web-разработчик из города Москва</h1>
             <div class="promo__btns">
                 <a href="#" class="promo__link btn">Портфолио</a>
-                <a href="#" class="promo__link">Про меня</a>
+                <a href="#about" class="promo__link">Про меня</a>
             </div>
         </div>
     </section>
 
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
            <div class="about__wrapper">
             <div class="about__img">
-                <img src="img/main_photo.jpg" alt="main_photo">
+                <!-- <img srcset="img/main_photo-min.jpg 300w,
+                            img/main_photo.jpg 400w"
+                    sizes="(max-width: 576px) 280px,
+                            (min-width: 577px) 400px"
+                src="img/main_photo.jpg" alt="main_photo"> -->
+                <picture>
+                    <source media="(max-width: 576px)" srcset="img/main_photo-min.jpg">
+                    <source media="(min-width: 577px)" srcset="img/main_photo.jpg">
+                    <img src="img/main_photo.jpg" alt="photo">
+                </picture>
             </div>
             
 
@@ -378,7 +387,7 @@
     </section>
 
 
-    <!-- <section class="portfolio">
+    <section class="portfolio">
         <div class="container">
             <h2 class="title_fz16 title__section-title">Портфолио</h2>
             <div class="title_fz36 title__section-subtitle">Мои работы</div>
@@ -405,9 +414,9 @@
                 </a>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="price">
+    <section class="price">
         <div class="container">
             <h2 class="title_fz16 title__section-title">Прайс-лист</h2>
             <div class="divider"></div>
@@ -449,10 +458,10 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
 
-    <!-- <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="contacts__wrapper">
                 <div class="contacts__img">
@@ -481,17 +490,17 @@
 
                     <form action="#" class="contacts__form">
                         <div class="contacts__input">
-                            <input required name="name" id="name" type="text">
+                            <input required name="name" type="text">
                             <label for="name">Ваше имя</label>
                         </div>
 
                         <div class="contacts__input">
-                            <input required name="email" id="email" type="email">
+                            <input required name="email" type="email">
                             <label for="email">Ваша почта</label>
                         </div>
 
                         <div class="contacts__textarea">
-                            <textarea name="text" id="text"></textarea>
+                            <textarea name="text"></textarea>
                             <label for="text">Ваше сообщение</label>
                         </div>
 
@@ -506,8 +515,11 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
