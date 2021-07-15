@@ -104,4 +104,10 @@
         line-height: 21px;
     }
 
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
 }
