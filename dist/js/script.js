@@ -60,3 +60,17 @@ $('form').submit(function(e) {
     return false;
 });
 
+//show sidepanel
+
+const sidepanel = document.querySelector('.sidepanel');
+
+window.addEventListener('scroll', () => {
+    if (document.documentElement.scrollTop > 900) {
+        sidepanel.style.visibility = 'visible';
+        sidepanel.style.opacity = 1;
+    } else {
+        sidepanel.style.visibility = 'hidden';
+        sidepanel.style.opacity = 0;
+    }
+});
+
