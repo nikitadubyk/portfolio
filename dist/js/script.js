@@ -36,13 +36,30 @@ counters.forEach( (item, i) => {
 
 // плавный скролл
 
-var $page = $('html, body');
-$('a[href*="#"]').click(function() {
-    $page.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 400);
-    closeModal();
-    return false;
+// var $page = $('html, body');
+// $('a[href*="#"]').click(function() {
+//     $page.animate({
+//         scrollTop: $($.attr(this, 'href')).offset().top
+//     }, 400);
+//     closeModal();
+//     return false;
+// });
+
+// плавный скролл на js
+
+const smoothlinks = document.querySelectorAll('a[href^="#"]');
+
+smoothlinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const id = link.getAttribute('href');
+    
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
 });
 
 
